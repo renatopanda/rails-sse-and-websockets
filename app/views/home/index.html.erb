@@ -1,0 +1,21 @@
+<h1>MEI-IoT - Exemplo de Server-sent Events e WebSockets</h1>
+
+<p>Exemplo 1: <a href="/home/ticker">/home/ticker</a></p>
+
+<p>Exemplo 2 (SSE): Abrir a consola do browser (ctrl+shift+i) e executar:
+<pre><code class="language-js">	//abrir canal
+	var evtSource = new EventSource('home/live');
+
+	//o que fazer a cada evento?
+	evtSource.addEventListener("other-event", function(e) {
+	  console.log(e.data);
+	  }, false);
+
+	 //fechar socket
+	 evtSource.close();
+</code></pre>
+</p>
+
+<p>Exemplo 3 (SSE): <a href="/home/sse">/home/sse</a></p>
+
+<p>Exemplo 4 (WebSockets): <a href="/home/chat">/home/chat</a></p>

@@ -1,0 +1,25 @@
+<div class="container">
+	<h1>MEI-IoT / ES - Chat using WebSockets</h1>
+	<span id="chat"></span>
+	<hr>
+	Message:
+	<br>
+	<textarea id="msg" class="form-control" style="min-width: 100%"></textarea>
+	<hr>
+	<button id="send" type="button" class="btn btn-primary">Send Message</button>
+</div>
+
+<script>
+	$(document).ready(function(){
+
+		App.chat.received = function(data) {
+			$("#chat").append(data['message'] + "<br>");
+		}
+
+		$("#send").click(function(){
+			msg = $("#msg").val();
+			// send message alert(msg);
+			App.chat.send_msg(msg); 
+		})
+	})
+</script>
