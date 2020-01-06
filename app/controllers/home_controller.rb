@@ -25,4 +25,7 @@ class HomeController < ApplicationController
 	def sse
 	end
 
+	def chat
+	end
+
 end

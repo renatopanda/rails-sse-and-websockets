@@ -13,6 +13,7 @@
 	$(document).ready(function(){
 
 		App.chat.received = function(data) {
+			console.log("[view file] received data: " + data['message']);
 			$("#chat").append(data['message'] + "<br>");
 		}
 

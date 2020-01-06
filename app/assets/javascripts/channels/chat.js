@@ -11,6 +11,7 @@ App.chat = App.cable.subscriptions.create("ChatChannel", {
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
     console.log("Received data: " + data['message']);
+    // this function is being replaced in the view as part of the simplest class example
   },
 
   send_msg: function(data) {
